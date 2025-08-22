@@ -214,7 +214,7 @@ lazy val common = crossProject(allPlatforms: _*).in(file("scalameta/common")).se
   enableMacros,
   buildInfoPackage := "scala.meta.internal",
   buildInfoKeys := Seq[BuildInfoKey](version),
-  crossScalaVersions := EarliestScala2Versions
+  crossScalaVersions := EarliestScalaVersions
 ).configureCross(crossPlatformPublishSettings).jsSettings(commonJsSettings)
   .enablePlugins(BuildInfoPlugin).nativeSettings(nativeSettings)
 
